@@ -8,7 +8,7 @@ def generate_verification_code():
     code = str(random.randint(100000, 999999))
     return code
 
-def generate_token(length=200):
+def generate_token(length=150):
     token_bytes = secrets.token_bytes(length)
     token = base64.urlsafe_b64encode(token_bytes).decode('utf-8')
     return token
