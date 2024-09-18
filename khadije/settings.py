@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'khadije.urls'
+ROOT_URLCONF = 'project_baftemo.urls'
 
 TEMPLATES = [
     {
