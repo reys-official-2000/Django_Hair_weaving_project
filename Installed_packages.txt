@@ -1,0 +1,11 @@
+Package         Version
+--------------- -------
+asgiref         3.8.1
+Django          5.1.1
+django-cleanup  8.1.0
+django-storages 1.14.4
+mysqlclient     2.2.4
+pillow          10.4.0
+pip             24.2
+sqlparse        0.5.1
+tzdata          2024.1

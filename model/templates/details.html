@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %} Model Details | Page | View {% endblock %}
+
+{% block content %}
+
+    <div class="Model_Details">
+        <div class="Model_image">
+            <div class="div_img">
+                <img src="{{ model.image.url }}" alt="{{ model.combined }}"/>
+            </div>
+        </div>
+        <div class="List_Model_Detail">
+            <li class="Dt">{{ model.name_fa }}</li>
+            <li class="Dt">{{ model.name_en }}</li>
+            <li class="Dt">{{ model.combined }}</li>
+            <li class="Dt" id="Dtt">{{ model.more_details }}</li>
+        </div>
+        <div class="Similar_Models">
+            <p>مدل های مشابه</p>
+            {% for similar in similar_models %}
+                <div class="item_similar">
+                    <div class="name_Description">
+                        <ul>
+                            <li>{{ similar.name_fa }}</li>
+                            <li>{{ similar.combined }}</li>
+                        </ul>
+                    </div>
+                    <div class="similar_image">
+                        <a href="{% url 'Model:ModelDetailsView' similar.id %}"><img src="{{ similar.image.url }}" alt="{{ similar.combined }}"/></a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} About | Page | View {% endblock %}
+
+
+{% block content %}
+    <style>
+        @media (max-width: 768px) {
+            .My_profile .Specifications .Sp {
+                font-size: 15px;
+            }
+        }
+
+        .My_profile .Specifications {
+            padding-top: 90px;
+        }
+    </style>
+    <div class="My_profile">
+        <div class="profile">
+            <img class="KH_img" src="{% static 'images/KHadige.png' %}" alt=""/>
+            <div class="Specifications">
+                <li class="Sp kh_name">خدیجه بیعتی نژاد</li>
+                <li class="Sp">بافت و حنا</li>
+                <li class="Sp">
+                    من، خدیجه بیعتی نژاد، با 38 سال سن، به مدت چهار سال است که به صورت
+                    حرفه‌ای در زمینه بافت مو و طراحی حنا فعالیت می‌کنم. از طریق
+                    آموزش‌های حضوری و آنلاین، توانسته‌ام مهارت‌های خود را در این زمینه
+                    بهبود بخشم و تا کنون مدل مختلف بافت مو را یاد گرفته‌ام. در این
+                    مدت، با شرکت در دوره‌های تخصصی، دانش و تجربه خود را افزایش داده‌ام و
+                    همواره در تلاش بوده‌ام تا با جدیدترین تکنیک‌ها و روش‌های روز دنیا
+                    آشنا شوم. هدف من از این کار، ارائه خدمات با کیفیت و منحصر به فرد به
+                    مشتریان عزیزم است. علاوه بر این، من به طراحی حنا نیز علاقه‌مند هستم
+                    و توانسته‌ام با ترکیب این دو هنر، طرح‌های زیبا و خلاقانه‌ای را به
+                    مشتریانم ارائه دهم. بافت مو و طراحی حنا برای من نه تنها یک شغل، بلکه
+                    یک هنر و عشق است که با تمام وجود به آن می‌پردازم
+                </li>
+                <div class="Relationship">
+                    <a href="https://wa.me/{{ whatsapp }}"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/{{ instagram }}"><i class="bi bi-instagram"></i></a>
+                    <a href="https://t.me/{{ telegram }}"><i class="bi bi-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
